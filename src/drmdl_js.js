@@ -140,7 +140,10 @@ drmdl_js.prototype.plugin_add = function(src) {
 		xhttp.open("GET", src);
 		xhttp.send();
 	}
-	var script = loadDoc(src);
+	var script = `
+	<script>
+	`+loadDoc(src)+`
+	</script>`;
 	_$('body').appendTo(script);
 };
 

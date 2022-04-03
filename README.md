@@ -8,6 +8,6 @@ jQuery replacement drmdl.js.
    
 etc...
    
-example: https://urobot2011.github.io/drmdl.js/examples/drmdl_js.html
+example: https://urobot2011.github.io/drmdl.js-beta/examples/drmdl_js.html
     
 there may be errors

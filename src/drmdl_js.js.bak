@@ -161,11 +161,5 @@ drmdl_js.prototype.plugin_add = function(src) {
 function _$(name){
 	return new drmdl_js(name);
 }
-
-function $$$(){
-	function $(name){
-		return new drmdl_js(name);
-	}
-}
 // replace jquery
 // no jquery crash

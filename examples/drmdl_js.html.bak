@@ -7,8 +7,8 @@
 <body>
     <ddd class='a'>.</ddd>
 	<ddd class='a'>.</ddd>
-    <script src="../src/drmdl_js.js"></script>
 	<script src="../src/plugin.bootstrap.js"></script>
+    <script src="../src/drmdl_js.js"></script>
     <script>
     _$('.a').html("ddd")
     // Your code goes here.

@@ -194,6 +194,20 @@ drmdl_js.prototype.addClass = function(...name) {
 	}
 };
 
+drmdl_js.prototype.removeClass = function(...name) {
+	if(name.length > 0){
+		for (let elem of this.ioce) {
+			for (var i = 0; i < name.length; i++) {
+    			elem.classList.remove(name[i]);
+			}
+		}
+	}else{
+		for (let elem of this.ioce) {
+			elem.classList.remove(name);
+		}
+	}
+};
+
 drmdl_js.prototype.toggleClass = function(...name) {
 	if(name.length > 0){
 		for (let elem of this.ioce) {
@@ -221,6 +235,74 @@ drmdl_js.prototype.AlternateToggleClass = function(...name) {
 		for (let elem of this.ioce) {
 			elem.classList.toggle(name);
 		}
+	}
+};
+
+drmdl_js.prototype.on = function(event,EventFunction,useCapture = 0) {
+	for (let elem of this.ioce) {
+		elem.addEventListener(event,EventFunction,useCapture);
+	}
+};
+
+drmdl_js.prototype.removeon = function(event,EventFunction,useCapture = 0) {
+	for (let elem of this.ioce) {
+		elem.removeEventListener(event,EventFunction,useCapture);
+	}
+};
+
+drmdl_js.prototype.click = function(EventFunction,useCapture = 0) {
+	var event = "click";
+	for (let elem of this.ioce) {
+		elem.addEventListener(event,EventFunction,useCapture);
+	}
+};
+
+drmdl_js.prototype.mouseover = function(EventFunction,useCapture = 0) {
+	var event = "mouseover";
+	for (let elem of this.ioce) {
+		elem.addEventListener(event,EventFunction,useCapture);
+	}
+};
+
+drmdl_js.prototype.mouseout = function(EventFunction,useCapture = 0) {
+	var event = "mouseout";
+	for (let elem of this.ioce) {
+		elem.addEventListener(event,EventFunction,useCapture);
+	}
+};
+
+drmdl_js.prototype.mousedown = function(EventFunction,useCapture = 0) {
+	var event = "mousedown";
+	for (let elem of this.ioce) {
+		elem.addEventListener(event,EventFunction,useCapture);
+	}
+};
+
+drmdl_js.prototype.mouseup = function(EventFunction,useCapture = 0) {
+	var event = "mouseup";
+	for (let elem of this.ioce) {
+		elem.addEventListener(event,EventFunction,useCapture);
+	}
+};
+
+drmdl_js.prototype.mousemove = function(EventFunction,useCapture = 0) {
+	var event = "mousemove";
+	for (let elem of this.ioce) {
+		elem.addEventListener(event,EventFunction,useCapture);
+	}
+};
+
+drmdl_js.prototype.contextmenu = function(EventFunction,useCapture = 0) {
+	var event = "contextmenu";
+	for (let elem of this.ioce) {
+		elem.addEventListener(event,EventFunction,useCapture);
+	}
+};
+
+drmdl_js.prototype.dbclick = function(EventFunction,useCapture = 0) {
+	var event = "dbclick";
+	for (let elem of this.ioce) {
+		elem.addEventListener(event,EventFunction,useCapture);
 	}
 };
 

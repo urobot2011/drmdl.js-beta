@@ -238,6 +238,181 @@ drmdl_js.prototype.AlternateToggleClass = function(...name) {
 	}
 };
 
+drmdl_js.prototype.on = function(event,EventFunction,useCapture = 0) {
+	for (let elem of this.ioce) {
+		elem.addEventListener(event,EventFunction,useCapture);
+	}
+};
+
+drmdl_js.prototype.removeon = function(event,EventFunction,useCapture = 0) {
+	for (let elem of this.ioce) {
+		elem.removeEventListener(event,EventFunction,useCapture);
+	}
+};
+
+/* Event{ */
+
+/* click */
+drmdl_js.prototype.click = function(EventFunction,useCapture = 0) {
+	var event = "click";
+	for (let elem of this.ioce) {
+		elem.addEventListener(event,EventFunction,useCapture);
+	}
+};
+
+drmdl_js.prototype.dbclick = function(EventFunction,useCapture = 0) {
+	var event = "dbclick";
+	for (let elem of this.ioce) {
+		elem.addEventListener(event,EventFunction,useCapture);
+	}
+};
+
+/* mouse */
+drmdl_js.prototype.mouseover = function(EventFunction,useCapture = 0) {
+	var event = "mouseover";
+	for (let elem of this.ioce) {
+		elem.addEventListener(event,EventFunction,useCapture);
+	}
+};
+
+drmdl_js.prototype.mouseout = function(EventFunction,useCapture = 0) {
+	var event = "mouseout";
+	for (let elem of this.ioce) {
+		elem.addEventListener(event,EventFunction,useCapture);
+	}
+};
+
+drmdl_js.prototype.mousedown = function(EventFunction,useCapture = 0) {
+	var event = "mousedown";
+	for (let elem of this.ioce) {
+		elem.addEventListener(event,EventFunction,useCapture);
+	}
+};
+
+drmdl_js.prototype.mouseup = function(EventFunction,useCapture = 0) {
+	var event = "mouseup";
+	for (let elem of this.ioce) {
+		elem.addEventListener(event,EventFunction,useCapture);
+	}
+};
+
+drmdl_js.prototype.mousemove = function(EventFunction,useCapture = 0) {
+	var event = "mousemove";
+	for (let elem of this.ioce) {
+		elem.addEventListener(event,EventFunction,useCapture);
+	}
+};
+
+drmdl_js.prototype.contextmenu = function(EventFunction,useCapture = 0) {
+	var event = "contextmenu";
+	for (let elem of this.ioce) {
+		elem.addEventListener(event,EventFunction,useCapture);
+	}
+};
+
+/* key */
+drmdl_js.prototype.keydown = function(EventFunction,useCapture = 0) {
+	var event = "keydown";
+	for (let elem of this.ioce) {
+		elem.addEventListener(event,EventFunction,useCapture);
+	}
+};
+
+drmdl_js.prototype.keyup = function(EventFunction,useCapture = 0) {
+	var event = "keyup";
+	for (let elem of this.ioce) {
+		elem.addEventListener(event,EventFunction,useCapture);
+	}
+};
+
+drmdl_js.prototype.keypress = function(EventFunction,useCapture = 0) {
+	var event = "keypress";
+	for (let elem of this.ioce) {
+		elem.addEventListener(event,EventFunction,useCapture);
+	}
+};
+
+/* form */
+drmdl_js.prototype.focus = function(EventFunction,useCapture = 0) {
+	var event = "focus";
+	for (let elem of this.ioce) {
+		elem.addEventListener(event,EventFunction,useCapture);
+	}
+};
+
+drmdl_js.prototype.blur = function(EventFunction,useCapture = 0) {
+	var event = "blur";
+	for (let elem of this.ioce) {
+		elem.addEventListener(event,EventFunction,useCapture);
+	}
+};
+
+drmdl_js.prototype.change = function(EventFunction,useCapture = 0) {
+	var event = "change";
+	for (let elem of this.ioce) {
+		elem.addEventListener(event,EventFunction,useCapture);
+	}
+};
+
+drmdl_js.prototype.submit = function(EventFunction,useCapture = 0) {
+	var event = "submit";
+	for (let elem of this.ioce) {
+		elem.addEventListener(event,EventFunction,useCapture);
+	}
+};
+
+drmdl_js.prototype.reset = function(EventFunction,useCapture = 0) {
+	var event = "reset";
+	for (let elem of this.ioce) {
+		elem.addEventListener(event,EventFunction,useCapture);
+	}
+};
+
+drmdl_js.prototype.select = function(EventFunction,useCapture = 0) {
+	var event = "select";
+	for (let elem of this.ioce) {
+		elem.addEventListener(event,EventFunction,useCapture);
+	}
+};
+
+/* load and more */
+drmdl_js.prototype.load = function(EventFunction,useCapture = 0) {
+	var event = "load";
+	for (let elem of this.ioce) {
+		elem.addEventListener(event,EventFunction,useCapture);
+	}
+};
+
+drmdl_js.prototype.abort = function(EventFunction,useCapture = 0) {
+	var event = "abort";
+	for (let elem of this.ioce) {
+		elem.addEventListener(event,EventFunction,useCapture);
+	}
+};
+
+drmdl_js.prototype.unload = function(EventFunction,useCapture = 0) {
+	var event = "unload";
+	for (let elem of this.ioce) {
+		elem.addEventListener(event,EventFunction,useCapture);
+	}
+};
+
+drmdl_js.prototype.resize = function(EventFunction,useCapture = 0) {
+	var event = "resize";
+	for (let elem of this.ioce) {
+		elem.addEventListener(event,EventFunction,useCapture);
+	}
+};
+
+drmdl_js.prototype.scroll = function(EventFunction,useCapture = 0) {
+	var event = "scroll";
+	for (let elem of this.ioce) {
+		elem.addEventListener(event,EventFunction,useCapture);
+	}
+};
+
+/* }Event */
+
 function _$(name){
 	return new drmdl_js(name);
 }

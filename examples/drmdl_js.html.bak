@@ -12,17 +12,19 @@
 <body>
     <ddd class='a'>.</ddd>
 	<ddd class='a'>.</ddd>
+	<aaa class='a'>.</aaa>
     <script src="../src/drmdl_js.js"></script>
 	<!--<script src="../src/drmdl_js.min.js"></script>-->
 	<script src="../src/plugin.bootstrap.js"></script>
-	<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <script>
     _$('ddd').html("ddd");
 	_$('ddd').addClass('red');
-	_$('ddd').click(function(){ 
+	alert(_$('ddd').length());
+	_$('ddd aaa').click(function(){ 
 		alert("ddd click"); 
 		_$('ddd').toggleClass('red');
 	});
+	_$('ddd').after(_$('aaa'));
     // Your code goes here.
  
     </script>

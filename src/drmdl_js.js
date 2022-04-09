@@ -2,7 +2,7 @@
 var drmdl_js_v = '1.0.0';
 var drmdl_plugin_v = [];
 function drmdl_js(ioc) {
-    this.ioc = ioc;
+    /*this.ioc = ioc;*/
 	this.ioce = document.querySelectorAll(ioc);
 }
 
@@ -244,9 +244,19 @@ drmdl_js.prototype.on = function(event,EventFunction,useCapture = 0) {
 	}
 };
 
-drmdl_js.prototype.removeon = function(event,EventFunction,useCapture = 0) {
+drmdl_js.prototype.off = function(event,EventFunction,useCapture = 0) {
 	for (let elem of this.ioce) {
 		elem.removeEventListener(event,EventFunction,useCapture);
+	}
+};
+
+drmdl_js.prototype.length = function() {
+	return this.ioce.length;
+};
+
+drmdl_js.prototype.after = function(after) {
+	for (let elem of this.ioce) {
+		elem.insertAdjacentHTML('beforebegin',after);
 	}
 };
 
@@ -370,6 +380,35 @@ drmdl_js.prototype.reset = function(EventFunction,useCapture = 0) {
 
 drmdl_js.prototype.select = function(EventFunction,useCapture = 0) {
 	var event = "select";
+	for (let elem of this.ioce) {
+		elem.addEventListener(event,EventFunction,useCapture);
+	}
+};
+
+/* drag and drop */
+drmdl_js.prototype.dragstart = function(EventFunction,useCapture = 0) {
+	var event = "dragstart";
+	for (let elem of this.ioce) {
+		elem.addEventListener(event,EventFunction,useCapture);
+	}
+};
+
+drmdl_js.prototype.drag = function(EventFunction,useCapture = 0) {
+	var event = "drag";
+	for (let elem of this.ioce) {
+		elem.addEventListener(event,EventFunction,useCapture);
+	}
+};
+
+drmdl_js.prototype.dragleave = function(EventFunction,useCapture = 0) {
+	var event = "dragleave";
+	for (let elem of this.ioce) {
+		elem.addEventListener(event,EventFunction,useCapture);
+	}
+};
+
+drmdl_js.prototype.drop = function(EventFunction,useCapture = 0) {
+	var event = "drop";
 	for (let elem of this.ioce) {
 		elem.addEventListener(event,EventFunction,useCapture);
 	}

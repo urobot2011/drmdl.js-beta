@@ -24,7 +24,10 @@
 		alert("ddd click"); 
 		_$('ddd').toggleClass('red');
 	});
-	_$('ddd').after(_$('aaa'));
+	_$('ddd').after('$','aaa',0);
+	_$('html').on('resize',function(){ 
+		console.log('height,width = '+_$('html').height()+', '+_$('html').width());
+	});
     // Your code goes here.
  
     </script>

@@ -95,21 +95,6 @@ drmdl_js.prototype.prepend = function(html,for_html = "for continue!") {
 	}
 };
 
-drmdl_js.prototype.prepend = function(html,for_html = "for continue!") {
-	var d_f_for1_var = 0;
-	if(for_html == "for continue!"){
-		for (let elem of this.ioce) {
-    		elem.innerHTML = html+elem.innerHTML;
-		}
-	}else{
-		for (let elem of this.ioce) {
-			if(for_html == d_f_for1_var){
-    			elem.innerHTML = html+elem.innerHTML;
-			}
-		}
-	}
-};
-
 drmdl_js.prototype.appendTo = function(html,for_html = "for continue!") {
 	var d_f_for1_var = 0;
 	if(for_html == "for continue!"){
@@ -254,9 +239,75 @@ drmdl_js.prototype.length = function() {
 	return this.ioce.length;
 };
 
-drmdl_js.prototype.after = function(after) {
+drmdl_js.prototype.height = function(Height_t = 1,ford = 0) {
+	var i = 0;
 	for (let elem of this.ioce) {
-		elem.insertAdjacentHTML('beforebegin',after);
+		if(ford == i){
+			if(Height_t == 1){
+				return elem.clientHeight;
+			}else{
+				return elem.offsetHeight;
+			}
+		}
+	    i++;
+	}
+};
+
+drmdl_js.prototype.width = function(Width_t = 1,ford = 0) {
+	var i = 0;
+	for (let elem of this.ioce) {
+		if(ford == i){
+			if(Width_t == 1){
+				return elem.clientWidth;
+			}else{
+				return elem.offsetWidth;
+			}
+		}
+		i++;
+	}
+};
+
+drmdl_js.prototype.after = function(after,t = 01010,n = 1) {
+	for (let elem of this.ioce) {
+		if(t == 01010){
+			elem.insertAdjacentHTML('afterend',after);
+		}else{
+			for (let elemt of document.querySelectorAll(t)) {
+				elem.insertAdjacentHTML('afterend',elemt.innerHTML);
+				if(n == 1){
+					elemt.remove();
+				}
+			}
+		}
+	}
+};
+
+drmdl_js.prototype.before = function(before,t = 01010,n = 1) {
+	for (let elem of this.ioce) {
+		if(t == 01010){
+			elem.insertAdjacentHTML('beforebegin',after);
+		}else{
+			for (let elemt of document.querySelectorAll(t)) {
+				elem.insertAdjacentHTML('beforebegin',elemt.innerHTML);
+			}
+			if(n == 1){
+				elemt.remove();
+			}
+		}
+	}
+};
+
+drmdl_js.prototype.remove = function() {
+	for (let elem of this.ioce) {
+		elem.remove();
+	}
+};
+
+drmdl_js.prototype.empty = function() {
+	for (let elem of this.ioce) {
+		while (elem.hasChildNodes()) {
+			elem.removeChild(elem.firstChild);
+		}
 	}
 };
 

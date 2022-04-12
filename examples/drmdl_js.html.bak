@@ -20,11 +20,14 @@
     _$('ddd').html("ddd");
 	_$('ddd').addClass('red');
 	alert(_$('ddd').length());
-	_$('ddd aaa').click(function(){ 
+	_$('ddd').click(function(){ 
 		alert("ddd click"); 
 		_$('ddd').toggleClass('red');
 	});
-	_$('ddd').after(_$('aaa'));
+	_$('ddd').after('$','aaa',0);
+	_$('html').resize(function(){ 
+		console.log('height,width = '+_$('html').height()+', '+_$('html').width());
+	});
     // Your code goes here.
  
     </script>
